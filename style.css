@@ -59,7 +59,7 @@ a {
     font-size: 0.85rem;
 }
 
-/* ===== HEADER (CONSISTENT FOR ALL PAGES) ===== */
+/* ===== HEADER ===== */
 header {
     background: #fff;
     padding: 14px 0;
@@ -133,16 +133,6 @@ header {
     color: #d97a3e;
 }
 
-.nav-cta {
-    background: #d97a3e;
-    color: #fff !important;
-    padding: 8px 22px;
-    border-radius: 40px;
-}
-.nav-cta:hover {
-    background: #c0662e !important;
-}
-
 /* ===== HERO ===== */
 .hero {
     padding: 60px 0 50px;
@@ -185,34 +175,6 @@ header {
     gap: 14px;
 }
 
-.hero-stats {
-    flex: 1 1 40%;
-    display: flex;
-    flex-wrap: wrap;
-    background: #fff;
-    padding: 30px 32px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    gap: 20px 30px;
-}
-
-.stat-item {
-    flex: 1 1 35%;
-    text-align: center;
-}
-.stat-number {
-    font-family: Georgia, serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    color: #d97a3e;
-}
-.stat-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #5e6e6f;
-    letter-spacing: 0.5px;
-}
 
 /* ===== SECTIONS ===== */
 .section-pad {
@@ -351,44 +313,6 @@ header {
 .step-card p {
     font-size: 0.95rem;
     color: #5e6e6f;
-}
-
-/* ===== STORIES ===== */
-.stories-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.story-card {
-    flex: 1 1 calc(33.33% - 30px);
-    min-width: 250px;
-    background: #fff;
-    padding: 24px 26px 28px;
-    border-radius: 20px;
-    border: 1px solid #ede6de;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-}
-
-.story-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-.story-location {
-    font-size: 0.85rem;
-    color: #7a8a8b;
-}
-.story-pet {
-    font-size: 0.9rem;
-    color: #d97a3e;
-    font-weight: 600;
-    margin: 4px 0 10px;
-}
-.story-quote {
-    font-style: italic;
-    color: #3f4e4f;
-    border-left: 3px solid #d97a3e;
-    padding-left: 16px;
 }
 
 /* ===== CTA ===== */
@@ -641,9 +565,6 @@ header {
         flex: 1 1 100%;
     }
     .step-card {
-        flex: 1 1 100%;
-    }
-    .story-card {
         flex: 1 1 100%;
     }
     .hero-stats {
