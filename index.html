@@ -1,30 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Animals Adoption Website</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawsNelspruit — Animal Rescue</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="main">
-    <div class="navbar">
-      <div class="icon">
-        <h2 class="logo">Adopt Save A Life</h2>
-      </div>
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="adoption.html">Adopt a Pet</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="hero">
-      <img src="vecteezy_woman-holding-puppy-in-animal-shelter_73862589 - Copy.jpg" alt="Animal available for adoption">
-      <p>Give a loving home to a furry friend </p>
-      <button onclick="window.location.href='adoption.html'">Adopt Now</button>
-    </div>
-  </div>
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
+                <div>
+                    <div class="logo-text">Paws<span>Nelspruit</span></div>
+                    <span class="logo-sub">Mpumalanga Animal Rescue</span>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Adopt</a></li>
+                <li><a href="#">Foster</a></li>
+                <li><a href="#">Volunteer</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h1>Give a Pet a <span>Forever Home</span> in Nelspruit</h1>
+                <p>Hundreds of loving animals are waiting for a family in Mpumalanga. Browse our rescued dogs, cats, and small animals — then take the first step toward adoption today.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">Browse Available Pets</a>
+                    <a href="#" class="btn-outline">How Adoption Works</a>
+                </div>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">340+</div>
+                    <div class="stat-label">Pets Adopted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">85</div>
+                    <div class="stat-label">Animals in Care</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Foster Families</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label">Adopter Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AVAILABLE PETS ===== -->
+    <section class="section-pad">
+        <div class="container">
+            <h2 class="section-title">Available Now</h2>
+            <p class="section-sub">Animals waiting for their forever family</p>
+
+            <div class="pet-flex">
+                <!-- Bamba -->
+                <div class="pet-card">
+                    <div class="pet-img">
+                        <img src="pup1.jpg" alt="Bamba" />
+                    </div>
+                    <div class="pet-body">
+                        <div class="pet-name">Bamba</div>
+                        <div class="pet-breed">Boerboel Mix</div>
+                        <div class="pet-age">2 years</div>
+                        <p class="pet-desc">A gentle giant rescued from the Hazyview road. Bamba is house‑trained, loves children, and gets along with other dogs.</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag highlight">Vaccinated</span>
+                            <span class="pet-tag highlight">Neutered</span>
+                            <span class="pet-tag">Kid‑Friendly</span>
+                        </div>
+                        <a href="adopt.html" class="btn-primary btn-sm">Apply to Adopt Bamba</a>
+                    </div>
+                </div>
+
+                <!-- Nandi -->
+                <div class="pet-card">
+                    <div class="pet-img">
+                        <img src="nandi-placeholder.jpg" alt="Nandi" />
+                    </div>
+                    <div class="pet-body">
+                        <div class="pet-name">Nandi</div>
+                        <div class="pet-breed">Domestic Shorthair</div>
+                        <div class="pet-age">1.5 years</div>
+                        <p class="pet-desc">Nandi was found near White River. She's playful, affectionate, and perfectly content as an indoor cat.</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag highlight">Spayed</span>
+                            <span class="pet-tag highlight">Vaccinated</span>
+                            <span class="pet-tag">Indoor</span>
+                        </div>
+                        <a href="adopt.html" class="btn-primary btn-sm">Apply to Adopt Nandi</a>
+                    </div>
+                </div>
+
+                <!-- Milo -->
+                <div class="pet-card">
+                    <div class="pet-img">
+                        <img src="milo-placeholder.jpg" alt="Milo" />
+                    </div>
+                    <div class="pet-body">
+                        <div class="pet-name">Milo</div>
+                        <div class="pet-breed">Holland Lop</div>
+                        <div class="pet-age">1 year</div>
+                        <p class="pet-desc">Sweet, curious and litter‑trained. Milo loves fresh veggies and gentle cuddles. Great for first‑time rabbit owners.</p>
+                        <div class="pet-tags">
+                            <span class="pet-tag highlight">Litter‑trained</span>
+                            <span class="pet-tag">Kid‑Friendly</span>
+                        </div>
+                        <a href="#" class="btn-primary btn-sm">Apply to Adopt Milo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW ADOPTION WORKS ===== -->
+    <section class="how-section section-pad">
+        <div class="container">
+            <h2 class="section-title">How Adoption Works</h2>
+            <p class="section-sub">Four simple steps to bring your new friend home</p>
+
+            <div class="steps-flex">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Browse &amp; Choose</h3>
+                    <p>Explore our available animals online or visit our shelter at 14 Ferreira Street, Nelspruit. Read each pet's full profile and find your match.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Meet &amp; Greet</h3>
+                    <p>Book a meet‑and‑greet session with the animal at our shelter. Bring all household members — including resident pets — to ensure compatibility.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Complete Application</h3>
+                    <p>Fill out our simple adoption form. We conduct a brief home check to ensure the animal is going to a safe, loving environment.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Welcome Home</h3>
+                    <p>Once approved, pay the adoption fee (R350–R600, covering all vet costs) and take your new family member home with a starter care pack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STORIES ===== -->
+    <section class="section-pad">
+        <div class="container">
+            <h2 class="section-title">Stories from Our Community</h2>
+            <p class="section-sub">Real adopters share their PawsNelspruit experience</p>
+
+            <div class="stories-flex">
+                <div class="story-card">
+                    <div class="story-name">Lindiwe Nkosi</div>
+                    <div class="story-location">Kanyamazane</div>
+                    <div class="story-pet">Adopted Brutus (Staffie Mix), Nov 2024</div>
+                    <div class="story-quote">"Brutus had a rough start but PawsNelspruit gave him time to heal. The team was honest about his needs and matched him perfectly to our home. He's now a total softie."</div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-name">Zanele Dlamini</div>
+                    <div class="story-location">Nelspruit North</div>
+                    <div class="story-pet">Adopted Mocha (Border Collie), Jan 2025</div>
+                    <div class="story-quote">"Mocha has brought so much joy to our family. The adoption process was smooth and the team really cared about finding the right match for us."</div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-name">Pieter van der Merwe</div>
+                    <div class="story-location">White River</div>
+                    <div class="story-pet">Adopted Lily &amp; Pepper (cats), March 2025</div>
+                    <div class="story-quote">"We adopted two bonded cats and they've settled in beautifully. PawsNelspruit made sure we were prepared and supported us every step of the way."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOSTER / DONATE CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Can't Adopt Right Now?<br /><span>Foster, Volunteer, or Donate</span></h2>
+            <p>Even a short‑term foster saves a life. Join our growing community of volunteers across Nelspruit and Mpumalanga — every paw prints a difference.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Discover a Foster</a>
+                <a href="#" class="btn-outline">Make a Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div class="footer-brand">
+                    <div class="logo-text" style="color:#fff;">Paws<span>Nelspruit</span></div>
+                    <span class="logo-sub" style="color:#9aabac;">Mpumalanga Animal Rescue</span>
+                    <p>A registered non‑profit animal rescue organisation serving Nelspruit and the greater Mpumalanga region since 2019.</p>
+                    <div class="footer-contact">
+                        <div><span class="icon">📍</span> 14 Ferreira Street, Nelspruit, 1200</div>
+                        <div><span class="icon">📞</span> 013 744 1822</div>
+                        <div><span class="icon">📧</span> adopt@pawsnelspruit.co.za</div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Adopt</h4>
+                    <ul>
+                        <li><a href="#">Browse All Pets</a></li>
+                        <li><a href="#">Dogs</a></li>
+                        <li><a href="#">Cats</a></li>
+                        <li><a href="#">Small Animals</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Adoption Fees</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="#">Foster a Pet</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Sponsor an Animal</a></li>
+                        <li><a href="#">Corporate Partners</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Vet Partners</a></li>
+                        <li><a href="#">Pet Care Tips</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
+                <div class="footer-social">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
