@@ -313,7 +313,6 @@ header {
     color: #5e6e6f;
 }
 
-/* ===== CTA ===== */
 .cta-section {
     background: #1e2b2c;
     color: #fff;
@@ -360,7 +359,7 @@ header {
     color: #1e2b2c;
 }
 
-/* ===== FOOTER ===== */
+
 .site-footer {
     background: #141f20;
     color: #cdd9da;
@@ -449,7 +448,6 @@ header {
     margin-left: 0;
 }
 
-/* ===== ADOPTION PAGE ===== */
 .adopt-flex {
     display: flex;
     flex-wrap: wrap;
@@ -553,8 +551,6 @@ header {
     width: 100%;
     text-align: center;
 }
-
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.2rem;
