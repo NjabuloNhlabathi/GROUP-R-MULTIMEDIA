@@ -185,7 +185,6 @@ header {
     color: #6f7a7a;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .header-flex {
         flex-direction: column;
