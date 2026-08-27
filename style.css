@@ -191,8 +191,6 @@ header {
     color: #5e6e6f;
     margin-bottom: 32px;
 }
-
-/* ===== PET CARDS ===== */
 .pet-flex {
     display: flex;
     flex-wrap: wrap;
