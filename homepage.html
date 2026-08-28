@@ -7,57 +7,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ===== HEADER ===== -->
+    <!-- ===== HEADER (CONSISTENT) ===== -->
     <header>
       <div class="container header-flex">
         <div class="logo">
           <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
           <div>
-            <div class="logo-text">Paws<span>Nelspruit</span></div>
+            <span class="logo-text">Paws<span>Nelspruit</span></span>
             <span class="logo-sub">Mpumalanga Animal Rescue</span>
           </div>
         </div>
 
-        <ul class="nav-links">
-          <li><a href="homepage.html">Home</a></li>
-          <li><a href="adopt.html">Adopt</a></li>
-          <li><a href="volunteer.html">Volunteer</a></li>
-          <li><a href="donate.html">Donate</a></li>
-          <li><a href="progress.html">Progress</a></li>
-          <li><a href="shop.html">Contact</a></li>
-        </ul>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="homepage.html" class="active">Home</a></li>
+            <li><a href="animals.html">Animals Available</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="financial_info.html">Financial Info</a></li>
+            <li><a href="progress.html">Adoption Progress</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <!-- ===== SLIDESHOW ===== -->
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="cutepup.jpg" alt="Cute puppy" />
+    <main>
+      <!-- ===== SLIDESHOW ===== -->
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="cutepup.jpg" alt="Cute puppy" />
+        </div>
+        <div class="slide">
+          <img src="kitty.jpg" alt="Cute kitten" />
+        </div>
+        <div class="slide">
+          <img src="pup1.jpg" alt="Happy dog" />
+        </div>
       </div>
-      <div class="slide">
-        <img src="kitty.jpg" alt="Cute kitten" />
-      </div>
-      <div class="slide">
-        <img src="pup1.jpg" alt="Happy dog" />
-      </div>
-    </div>
+    </main>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- ===== FOOTER (CONSISTENT) ===== -->
     <footer>
       <div class="container footer-flex">
         <div class="footer-brand">
-          <div class="logo-text">Paws<span>Nelspruit</span></div>
+          <span class="logo-text">Paws<span>Nelspruit</span></span>
           <span class="logo-sub">Mpumalanga Animal Rescue</span>
           <p>
-            A registered non‑profit animal rescue organisation serving Nelspruit
+            A registered non-profit animal rescue organisation serving Nelspruit
             since 2019.
           </p>
           <div class="footer-contact">
-            <div>
-              <span class="icon"></span> 14 Ferreira Street, Nelspruit, 1200
-            </div>
-            <div><span class="icon"></span> 013 744 1822</div>
-            <div><span class="icon"></span> adopt@pawsnelspruit.co.za</div>
+            <p>Address: 14 Ferreira Street, Nelspruit, 1200</p>
+            <p>Phone: 013 744 1822</p>
+            <p>Email: adopt@pawsnelspruit.co.za</p>
           </div>
         </div>
       </div>
