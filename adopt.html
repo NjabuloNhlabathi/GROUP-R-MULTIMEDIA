@@ -1,190 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PawsNelspruit — Adopt a Pet</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-    <!-- ===== HEADER (CONSISTENT) ===== -->
-    <header>
-        <div class="container header-flex">
-            <div class="logo">
-                <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
-                <div>
-                    <span class="logo-text">Paws<span>Nelspruit</span></span>
-                    <span class="logo-sub">Mpumalanga Animal Rescue</span>
-                </div>
-            </div>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="adopt.html" class="active">Adopt</a></li>
-                    <li><a href="foster.html">Foster</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="donate.html" class="nav-cta">Donate</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ===== ADOPTION APPLICATION ===== -->
-    <main>
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Adopt a Pet</h2>
-                <p class="section-sub">Fill in the form below to start the adoption process. We'll get back to you within 24 hours.</p>
-
-                <div class="adopt-flex">
-                    <!-- List of available pets -->
-                    <div class="adopt-pets">
-                        <h3>Available Pets</h3>
-                        <ul>
-                            <li><strong>Bamba</strong> — Boerboel Mix, 2 years</li>
-                            <li><strong>Nandi</strong> — Domestic Shorthair, 1.5 years</li>
-                            <li><strong>Milo</strong> — Holland Lop, 1 year</li>
-                            <li><strong>Brutus</strong> — Staffie Mix, 3 years</li>
-                        </ul>
-                        <p class="note">* All pets are vaccinated, dewormed, and sterilised.</p>
-                    </div>
-
-                    <!-- Adoption Form -->
-                    <div class="adopt-form">
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label for="fullname">Your Full Name *</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="e.g. Thandi Mokoena" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="082 123 4567" required />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="pet-choice">Which Pet Are You Interested In? *</label>
-                                <select id="pet-choice" name="pet-choice" required>
-                                    <option value="">Select a pet...</option>
-                                    <option value="bamba">Bamba — Boerboel Mix</option>
-                                    <option value="nandi">Nandi — Domestic Shorthair</option>
-                                    <option value="milo">Milo — Holland Lop</option>
-                                    <option value="brutus">Brutus — Staffie Mix</option>
-                                    <option value="other">Other / Not sure yet</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="address">Home Address</label>
-                                <input type="text" id="address" name="address" placeholder="Street, suburb, city" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="housing">Type of Housing</label>
-                                <select id="housing" name="housing">
-                                    <option value="house">House with garden</option>
-                                    <option value="flat">Flat / Apartment</option>
-                                    <option value="townhouse">Townhouse</option>
-                                    <option value="farm">Farm / Smallholding</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="reason">Why do you want to adopt? *</label>
-                                <textarea id="reason" name="reason" rows="4" placeholder="Tell us about your home, family, and why you'd like to adopt this pet..." required></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Do you have other pets?</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="other-pets" value="yes" /> Yes</label>
-                                    <label><input type="radio" name="other-pets" value="no" checked /> No</label>
-                                    <label><input type="radio" name="other-pets" value="maybe" /> I've had pets before</label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" name="agree" required />
-                                    I understand that a home check will be conducted and that adoption fees apply (R350–R600).
-                                </label>
-                            </div>
-
-                            <button type="submit" class="btn-primary">Submit Adoption Application</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
+  
     <footer>
-        <div class="container footer-flex">
-            <div class="footer-brand">
-                <span class="logo-text" style="color:#fff;">Paws<span>Nelspruit</span></span>
-                <span class="logo-sub" style="color:#9aabac;">Mpumalanga Animal Rescue</span>
-                <p>A registered non‑profit animal rescue organisation serving Nelspruit and the greater Mpumalanga region since 2019.</p>
-                <div class="footer-contact">
-                    <p><span class="icon">📍</span> 14 Ferreira Street, Nelspruit, 1200</p>
-                    <p><span class="icon">📞</span> 013 744 1822</p>
-                    <p><span class="icon">📧</span> adopt@pawsnelspruit.co.za</p>
-                </div>
-            </div>
-
-            <div class="footer-links">
-                <h4>Adopt</h4>
-                <ul>
-                    <li><a href="#">Browse All Pets</a></li>
-                    <li><a href="#">Dogs</a></li>
-                    <li><a href="#">Cats</a></li>
-                    <li><a href="#">Small Animals</a></li>
-                    <li><a href="#">Adoption Process</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-links">
-                <h4>Get Involved</h4>
-                <ul>
-                    <li><a href="#">Foster a Pet</a></li>
-                    <li><a href="#">Volunteer</a></li>
-                    <li><a href="#">Donate</a></li>
-                    <li><a href="#">Sponsor an Animal</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-links">
-                <h4>Information</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Vet Partners</a></li>
-                    <li><a href="#">Pet Care Tips</a></li>
-                    <li><a href="#">Success Stories</a></li>
-                </ul>
-            </div>
+      <div class="container footer-flex">
+        <div class="footer-brand">
+          <span class="logo-text">Paws<span>Nelspruit</span></span>
+          <span class="logo-sub">Mpumalanga Animal Rescue</span>
+          <p>
+            A registered non-profit animal rescue organisation serving Nelspruit
+            and the greater Mpumalanga region since 2019.
+          </p>
+          <div class="footer-contact">
+            <p>
+              <span class="icon"></span> 14 Ferreira Street, Nelspruit, 1200
+            </p>
+            <p><span class="icon"></span> 013 744 1822</p>
+            <p><span class="icon"></span> adopt@pawsnelspruit.co.za</p>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="container bottom-flex">
-                <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
-                <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">YouTube</a>
-                </div>
-            </div>
+        <div class="footer-links">
+          <h4>Adopt</h4>
+          <ul>
+            <li><a href="#">Browse All Pets</a></li>
+            <li><a href="#">Dogs</a></li>
+            <li><a href="#">Cats</a></li>
+            <li><a href="#">Small Animals</a></li>
+            <li><a href="#">Adoption Process</a></li>
+          </ul>
         </div>
+
+        <div class="footer-links">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="#">Foster a Pet</a></li>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Sponsor an Animal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Vet Partners</a></li>
+            <li><a href="#">Pet Care Tips</a></li>
+            <li><a href="#">Success Stories</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container bottom-flex">
+          <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">YouTube</a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
+ 
