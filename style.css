@@ -207,6 +207,23 @@ header {
     color: #6f7a7a;
 }
 
+.paw-right {
+    width: 200px;
+    transform: rotate(120deg);   /* tilt diagonally */
+    margin: 20px;
+
+}
+
+.paw-left {
+    width: 200px;
+    transform: rotate(-170deg);   /* tilt diagonally */
+    margin: 20px;
+
+}
+
+
+
+
 @media (max-width: 768px) {
     .header-flex {
         flex-direction: column;
