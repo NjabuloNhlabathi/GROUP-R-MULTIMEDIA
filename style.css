@@ -131,6 +131,14 @@ header {
     animation-delay: 10s;
 }
 
+.progress-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+  margin: 20px 0;
+}
+
+
 @keyframes fadeSlides {
     0%   { opacity: 0; }
     10%  { opacity: 1; }
