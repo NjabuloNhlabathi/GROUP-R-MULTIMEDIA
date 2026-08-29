@@ -131,6 +131,14 @@ header {
     animation-delay: 10s;
 }
 
+.progress-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            
+  margin: 20px 0;
+}
+
+
 @keyframes fadeSlides {
     0%   { opacity: 0; }
     10%  { opacity: 1; }
@@ -265,10 +273,4 @@ header {
         min-height: 200px;
         max-height: 280px;
     }
-}
-
-.progress page pictures{
-    display: inline-block;
-    border: 1px solid rgb(20, 20, 20) ;
-    margin: 5px;
 }
