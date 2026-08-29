@@ -131,6 +131,20 @@ header {
     animation-delay: 10s;
 }
 
+
+.progess-header {
+     text-align:center;
+     color: #d97a3e;
+
+}
+
+.headingIndex {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #1e2b2c;
+}
+
 .progress-step {
   display: flex;
   justify-content: space-between;
