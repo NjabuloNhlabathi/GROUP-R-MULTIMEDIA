@@ -314,10 +314,8 @@ header {
     
 }
 
-
 .adoption-form label {
     display: block;
-    font-weight: 600;
     margin-bottom: 18px;
 }
 
@@ -326,19 +324,16 @@ header {
 .adoption-form textarea {
     width: 100%;
     padding: 10px 12px;
-    border: 1.5px solid #d9d0c6;
-    border-radius: 8px;
+    border: 1.5px solid;
     font-size: 1rem;
-    font-family: inherit;
-    background: #fcf9f6;
-    margin-top: 4px;
+    background: white;
     display: block;
 }
 
 .adoption-form input:focus,
 .adoption-form select:focus,
 .adoption-form textarea:focus {
-    border-color: #d97a3e;
+    border-color: b#d97a3e;
     outline: none;
     background: #fff;
 }
@@ -363,36 +358,21 @@ header {
 
 .adoption-navigation {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    justify-content: center;
+    gap: 10px;
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #ede6de;
 }
 
 .adoption-navigation a {
-    padding: 10px 30px;
+    padding: 5px 30px;
     border-radius: 30px;
     font-weight: 600;
     text-align: center;
-    text-decoration: none;
-    background: beige;
-    color: #1e2b2c;
-}
-
-.adoption-navigation a:last-child {
     background: #d97a3e;
     color: white;
 }
-.adoption-navigation a:hover {
-    opacity: 0.5;
-}
-@media (max-width: 600px) {
-    .adoption-content {
-        padding: 20px;
-    }
-}
-
 
 .animal-gallery-grid {
     display: grid !important;
@@ -418,58 +398,4 @@ header {
     font-weight: 600;
     color: #1e2b2c;
     margin-top: 6px;
-}
-
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .logo {
-        flex-direction: column;
-        align-items: center;
-    }
-    .nav-links {
-        justify-content: center;
-        gap: 16px;
-    }
-    .progress-layout {
-        flex-direction: column;
-    }
-    .progress-side-image {
-        position: static;
-        width: 100%;
-    }
-    
-    .right-image {
-        min-height: 260px;
-        max-height: 360px;
-    }
-}
-
-.animalsHeading {
-    text-align: center;
-     font-size: 2rem;
-    
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    .nav-links {
-        gap: 12px;
-        font-size: 0.85rem;
-    }
-    .logo-text {
-        font-size: 1.3rem;
-    }
-    .logo-img {
-        height: 40px;
-    }
-    .right-image {
-        min-height: 200px;
-        max-height: 280px;
-    }
 }
