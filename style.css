@@ -95,70 +95,11 @@ header {
     color: #d97a3e;
 }
 
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    background: #ede6de;
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation: fadeSlides 15s infinite;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
-.slide:nth-child(1) {
-    animation-delay: 0s;
-}
-.slide:nth-child(2) {
-    animation-delay: 5s;
-}
-.slide:nth-child(3) {
-    animation-delay: 10s;
-}
-
-
-.progess-header {
-     text-align:center;
-     color: #d97a3e;
-
-}
-
 .headingIndex {
     text-align: center;
     margin-top: 20px;
     font-size: 2rem;
     color: #1e2b2c;
-}
-
-.progress-step {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;            
-  margin: 20px 0;
-}
-
-
-@keyframes fadeSlides {
-    0%   { opacity: 0; }
-    10%  { opacity: 1; }
-    30%  { opacity: 1; }
-    40%  { opacity: 0; }
-    100% { opacity: 0; }
 }
 
 .footer {
@@ -207,11 +148,24 @@ header {
     color: #6f7a7a;
 }
 
+/* ----- remaining layout styles for other pages (adopt, progress, etc.) ----- */
+
+.progess-header {
+    text-align:center;
+    color: #d97a3e;
+}
+
+.progress-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+    margin: 20px 0;
+}
+
 .paw-right {
     width: 200px;
     transform: rotate(120deg);   
     margin: 20px;
-
 }
 
 .paw-left {
@@ -219,7 +173,6 @@ header {
     transform: rotate(-170deg);  
     margin: 20px;
 }
-
 
 .progress-layout {
     display: flex;
@@ -232,7 +185,6 @@ header {
 
 .progress-main-content {
     flex: 2;
-
 }
 
 .progress-side-image {
@@ -246,7 +198,6 @@ header {
     position: sticky;
     top: 100px;
 }
-   
 
 .progress-side-image img {
     width: 100%;
@@ -256,7 +207,6 @@ header {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     object-fit: cover;
 }
-
 
 .paw-right .decription {
     transform: rotate(-120deg); 
@@ -276,59 +226,6 @@ header {
     margin-top: 4px;
     border: 1px solid #d97a3e;
     border-radius: 20px;   
-
-
-}
-
-@media (max-width: 768px) {
-    .progress-layout {
-        flex-direction: column;
-    }
-    .progress-side-image {
-        position: static;
-        width: 100%;
-    }
-}
-
-
-
-
-@media (max-width: 768px) {
-    .header-flex {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .logo {
-        flex-direction: column;
-        align-items: center;
-    }
-    .nav-links {
-        justify-content: center;
-        gap: 16px;
-    }
-    .slideshow-container {
-        height: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 16px;
-    }
-    .nav-links {
-        gap: 12px;
-        font-size: 0.85rem;
-    }
-    .logo-text {
-        font-size: 1.3rem;
-    }
-    .logo-img {
-        height: 40px;
-    }
-    .slideshow-container {
-        height: 200px;
-    }
 }
 
 .adoption-layout {
@@ -356,12 +253,70 @@ header {
     object-fit: cover;
 }
 
+.adoption-image img {
+    display: block;       
+    margin: 0 auto;       
+    max-width: 100%;      
+    height: auto;        
+}
+
+.animal-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px; 
+}
+
+.gallery {
+    text-align: center;
+    background: #fff;
+    border: 2px solid #ede6de;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #d97a3e;   
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.gallery .description {
+    font-weight: 600;
+    color: #1e2b2c;
+    margin-top: 6px;
+}
+
+/* ----- responsive rules (slideshow media queries removed) ----- */
+
 @media (max-width: 768px) {
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 16px;
+    }
+    .progress-layout {
+        flex-direction: column;
+    }
+    .progress-side-image {
+        position: static;
+        width: 100%;
+    }
     .adoption-layout {
         flex-direction: column;
         gap: 28px;
     }
-
     .right-image {
         min-height: 260px;
         max-height: 360px;
@@ -369,6 +324,19 @@ header {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    .nav-links {
+        gap: 12px;
+        font-size: 0.85rem;
+    }
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    .logo-img {
+        height: 40px;
+    }
     .right-image {
         min-height: 200px;
         max-height: 280px;

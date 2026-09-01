@@ -1,60 +1,664 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PawsNelspruit — Animal Rescue</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <title>Checkout</title>
+    <style>
+        /* ── Reset & Base ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <header>
-      <div class="container header-flex">
-        <div class="logo">
-          <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
-          <div>
-            <div class="logo-text">Paws<span>Nelspruit</span></div>
-            <span class="logo-sub">Mpumalanga Animal Rescue</span>
-          </div>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        h3 {
+            color: #6B3410;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border-bottom: 3px solid #8B4513;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* ── Payment Methods ── */
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 25px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .payment-methods img {
+            max-width: 80px;
+            height: auto;
+            object-fit: contain;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .payment-methods img:hover {
+            opacity: 1;
+        }
+
+        /* ── Card Display ── */
+        .card-display-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .card-display-section h3 {
+            margin-top: 0;
+            font-size: 16px;
+            border-bottom: none;
+            color: #8B4513;
+            margin-bottom: 15px;
+        }
+
+        .credit-card {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            border-radius: 15px;
+            padding: 30px 25px;
+            color: white;
+            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.4);
+            text-align: left;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credit-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .credit-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -30%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-chip {
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-number {
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            min-height: 32px;
+        }
+
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 20px;
+        }
+
+        .card-holder {
+            flex: 1;
+        }
+
+        .card-holder-label {
+            font-size: 10px;
+            opacity: 0.8;
+            margin-bottom: 3px;
+        }
+
+        .card-holder-name {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            min-height: 24px;
+        }
+
+        .card-expiry-label {
+            font-size: 10px;
+            opacity: 0.8;
+            margin-bottom: 3px;
+        }
+
+        .card-expiry-date {
+            font-size: 16px;
+            font-weight: bold;
+            min-height: 24px;
+        }
+
+        /* ── Form ── */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: #333;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            padding: 12px 15px;
+            border: 2px solid #D2B48C;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+        }
+
+        input.error {
+            border-color: #c0392b;
+            box-shadow: 0 0 8px rgba(192, 57, 43, 0.3);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ── Submit ── */
+        input[type="submit"] {
+            margin-top: 30px;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        /* ── Security ── */
+        .security-message {
+            background-color: #FFF8DC;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .security-message u {
+            color: #8B4513;
+            font-weight: 600;
+        }
+
+        /* ── Toast notification ── */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #27ae60;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            font-weight: 600;
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            z-index: 999;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.error {
+            background: #c0392b;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 500px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .credit-card {
+                height: 190px;
+                padding: 20px 18px;
+            }
+
+            .card-number {
+                font-size: 18px;
+                margin: 12px 0;
+            }
+
+            .card-holder-name {
+                font-size: 14px;
+            }
+
+            .payment-methods img {
+                max-width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout</h2>
+        <p>Please fill in your payment details below.</p>
+
+        <p><strong>Accepted payment methods:</strong></p>
+        <div class="payment-methods">
+            <!-- Placeholder images – replace with real asset paths if needed -->
+            <img src="PayPAL.jpg" alt="PayPal" />
+            <img src="Visa and Mastercard.jpg" alt="Visa and Mastercard" />
+            <img src="Apple Pay and Google Pay Icons Editorial Stock Photo - Image of marketing, finance_ 145949978.jpg" alt="Apple Pay and Google Pay" />
+            <img src="american express.jpg" alt="American Express" />
         </div>
 
-        <ul class="nav-links">
-          <li><a href="homepage.html">HOME</a></li>
-          <li><a href="adopt.html">ADOPT</a></li>
-          <li><a href="shop.html">SHOP</a></li>
-        </ul>
-      </div>
-    </header>
-
-    <h1>Adopt a Pet</h1>
-
-
-
-
-    <footer>
-      <div class="container footer-flex">
-        <div class="footer-brand">
-          <div class="logo-text">Paws<span>Nelspruit</span></div>
-          <span class="logo-sub">Mpumalanga Animal Rescue</span>
-          <p>
-            A registered non-profit animal rescue organisation serving Nelspruit
-            since 2019.
-          </p>
-          <div class="footer-contact">
-            <div>
-              <span class="icon"></span> 14 Ferreira Street, Nelspruit, 1200
+        <!-- ─── CREDIT CARD PREVIEW ─── -->
+        <div class="card-display-section">
+            <h3>Your Card</h3>
+            <div class="credit-card">
+                <div class="card-content">
+                    <div class="card-chip"></div>
+                    <div class="card-number" id="displayCardNumber">1234 5678 9012 3456</div>
+                    <div class="card-details">
+                        <div class="card-holder">
+                            <div class="card-holder-label">CARD HOLDER</div>
+                            <div class="card-holder-name" id="displayCardHolder">YOUR NAME</div>
+                        </div>
+                        <div class="card-expiry">
+                            <div class="card-expiry-label">EXPIRES</div>
+                            <div class="card-expiry-date" id="displayExpiry">MM/YY</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div><span class="icon"></span> 013 744 1822</div>
-            <div><span class="icon"></span> adopt@pawsnelspruit.co.za</div>
-          </div>
         </div>
-      </div>
 
-      <div class="footer-bottom">
-        <div class="container">
-          <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
-  </body>
+        <!-- ─── FORM ─── -->
+        <h3>Account Information</h3>
+        <form id="paymentForm" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Fred" required />
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Legend" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Amount:</label>
+                <input type="text" id="payment" name="payment" placeholder="R0.00" required />
+            </div>
+
+            <div class="form-group">
+                <label for="card">Card Number:</label>
+                <input type="text" id="card" name="card" placeholder="1234 5678 9012 3456" maxlength="19" required />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="exp">Expiration Date:</label>
+                    <input type="text" id="exp" name="exp" placeholder="MM/YY" maxlength="5" required />
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required />
+                </div>
+            </div>
+
+            <input type="submit" value="Submit Payment" />
+        </form>
+
+        <p class="security-message">
+            ✓ Your information is kept safe and confidential with us as we are under the
+            <u>Protection of Personal Information Act "POPIA"</u>.
+        </p>
+    </div>
+
+    <!-- ─── TOAST NOTIFICATION ─── -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ─── DOM refs ──────────────────────────────────────────────
+            const displayNumber = document.getElementById('displayCardNumber');
+            const displayHolder = document.getElementById('displayCardHolder');
+            const displayExpiry = document.getElementById('displayExpiry');
+
+            const fnameInput = document.getElementById('fname');
+            const lnameInput = document.getElementById('lname');
+            const cardInput = document.getElementById('card');
+            const expInput = document.getElementById('exp');
+            const cvvInput = document.getElementById('cvv');
+            const paymentInput = document.getElementById('payment');
+            const form = document.getElementById('paymentForm');
+            const toast = document.getElementById('toast');
+
+            let toastTimer = null;
+
+            // ─── Helpers ──────────────────────────────────────────────
+
+            /** Format card number: groups of 4 digits separated by space */
+            function formatCardNumber(raw) {
+                // Remove all non-digits
+                const digits = raw.replace(/\D/g, '');
+                // Insert space every 4 characters
+                const chunks = digits.match(/.{1,4}/g) || [];
+                return chunks.join(' ').slice(0, 19); // max 16 digits + 3 spaces
+            }
+
+            /** Format expiry: automatically insert '/' after 2 digits */
+            function formatExpiry(raw) {
+                const digits = raw.replace(/\D/g, '');
+                if (digits.length === 0) return '';
+                if (digits.length <= 2) return digits;
+                return digits.slice(0, 2) + '/' + digits.slice(2, 4);
+            }
+
+            /** Show a toast message (auto-dismiss after 3s) */
+            function showToast(message, isError = false) {
+                if (toastTimer) {
+                    clearTimeout(toastTimer);
+                    toast.classList.remove('show', 'error');
+                }
+                toast.textContent = message;
+                toast.className = 'toast';
+                if (isError) toast.classList.add('error');
+                // Force reflow for animation restart
+                void toast.offsetWidth;
+                toast.classList.add('show');
+
+                toastTimer = setTimeout(() => {
+                    toast.classList.remove('show');
+                    toastTimer = null;
+                }, 3000);
+            }
+
+            /** Validate a field and toggle error class */
+            function validateField(input, condition, errorMsg) {
+                if (!condition) {
+                    input.classList.add('error');
+                    return false;
+                } else {
+                    input.classList.remove('error');
+                    return true;
+                }
+            }
+
+            // ─── Update card preview ──────────────────────────────────
+
+            function updateCardPreview() {
+                // 1) Card number
+                const rawCard = cardInput.value;
+                const formatted = formatCardNumber(rawCard);
+                // If the user hasn't typed anything, show placeholder
+                if (formatted.length === 0) {
+                    displayNumber.textContent = '1234 5678 9012 3456';
+                } else {
+                    displayNumber.textContent = formatted || '•••• •••• •••• ••••';
+                }
+
+                // 2) Card holder (first + last name)
+                const first = fnameInput.value.trim().toUpperCase() || '';
+                const last = lnameInput.value.trim().toUpperCase() || '';
+                const full = (first + ' ' + last).trim();
+                displayHolder.textContent = full || 'YOUR NAME';
+
+                // 3) Expiry
+                const rawExp = expInput.value;
+                const formattedExp = formatExpiry(rawExp);
+                if (formattedExp.length === 0) {
+                    displayExpiry.textContent = 'MM/YY';
+                } else {
+                    displayExpiry.textContent = formattedExp;
+                }
+            }
+
+            // ─── Attach input events ──────────────────────────────────
+
+            // Card number: format as user types, but keep cursor position
+            cardInput.addEventListener('input', function(e) {
+                // Store current cursor position
+                const start = this.selectionStart;
+                const end = this.selectionEnd;
+                const oldLen = this.value.length;
+
+                // Format the value
+                const raw = this.value;
+                const digits = raw.replace(/\D/g, '');
+                let formatted = '';
+                for (let i = 0; i < digits.length && i < 16; i++) {
+                    if (i > 0 && i % 4 === 0) formatted += ' ';
+                    formatted += digits[i];
+                }
+                this.value = formatted;
+
+                // Adjust cursor position
+                const newLen = this.value.length;
+                const diff = newLen - oldLen;
+                // If we inserted a space, move cursor forward
+                const newPos = (start + diff > 0) ? start + diff : 0;
+                this.setSelectionRange(newPos, newPos);
+
+                updateCardPreview();
+            });
+
+            // First name, last name, expiry: update preview on input
+            fnameInput.addEventListener('input', updateCardPreview);
+            lnameInput.addEventListener('input', updateCardPreview);
+
+            expInput.addEventListener('input', function(e) {
+                // Auto-format: insert '/' after 2 digits
+                const raw = this.value;
+                const digits = raw.replace(/\D/g, '');
+                let formatted = '';
+                if (digits.length > 0) {
+                    formatted = digits.slice(0, 2);
+                    if (digits.length > 2) {
+                        formatted += '/' + digits.slice(2, 4);
+                    }
+                }
+                // Only update if changed to avoid cursor jumps
+                if (this.value !== formatted) {
+                    this.value = formatted;
+                }
+                updateCardPreview();
+            });
+
+            // CVV: only digits, max 3
+            cvvInput.addEventListener('input', function() {
+                this.value = this.value.replace(/\D/g, '').slice(0, 3);
+            });
+
+            // Payment amount: allow numbers and decimal point
+            paymentInput.addEventListener('input', function() {
+                // Allow digits and a single decimal point
+                let val = this.value.replace(/[^0-9.]/g, '');
+                // Ensure only one decimal
+                const parts = val.split('.');
+                if (parts.length > 2) {
+                    val = parts[0] + '.' + parts.slice(1).join('');
+                }
+                this.value = val;
+            });
+
+            // ─── Form submission ──────────────────────────────────────
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Gather values
+                const first = fnameInput.value.trim();
+                const last = lnameInput.value.trim();
+                const payment = paymentInput.value.trim();
+                const cardRaw = cardInput.value.replace(/\s/g, '');
+                const expRaw = expInput.value.replace('/', '');
+                const cvv = cvvInput.value.trim();
+
+                // ── Validation ──
+                let isValid = true;
+
+                // First name
+                if (!validateField(fnameInput, first.length >= 2, 'First name must be at least 2 characters.')) {
+                    isValid = false;
+                }
+
+                // Last name
+                if (!validateField(lnameInput, last.length >= 2, 'Last name must be at least 2 characters.')) {
+                    isValid = false;
+                }
+
+                // Payment amount
+                const amountNum = parseFloat(payment);
+                if (!validateField(paymentInput, payment.length > 0 && !isNaN(amountNum) && amountNum > 0,
+                        'Please enter a valid payment amount (e.g. R100.00).')) {
+                    isValid = false;
+                }
+
+                // Card number – must be 16 digits
+                const cardDigits = cardRaw.replace(/\D/g, '');
+                if (!validateField(cardInput, cardDigits.length === 16,
+                        'Card number must be exactly 16 digits.')) {
+                    isValid = false;
+                }
+
+                // Expiry – must be MM/YY with valid month and year
+                const month = parseInt(expRaw.slice(0, 2), 10);
+                const year = parseInt(expRaw.slice(2, 4), 10);
+                const expValid = expRaw.length === 4 &&
+                    !isNaN(month) && month >= 1 && month <= 12 &&
+                    !isNaN(year) && year >= 0 && year <= 99;
+                if (!validateField(expInput, expValid, 'Expiration must be MM/YY (e.g. 12/25).')) {
+                    isValid = false;
+                }
+
+                // CVV – 3 digits
+                if (!validateField(cvvInput, /^\d{3}$/.test(cvv), 'CVV must be exactly 3 digits.')) {
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    showToast('Please fix the highlighted fields.', true);
+                    return;
+                }
+
+                // ── Success ──
+                // Build a masked card number for the success message
+                const masked = '•••• •••• •••• ' + cardDigits.slice(-4);
+                const nameDisplay = (first + ' ' + last).toUpperCase();
+                showToast(`✅ Payment of R${amountNum.toFixed(2)} approved for ${nameDisplay} (${masked}). Thank you!`);
+
+                // Optionally reset form (uncomment if desired)
+                // form.reset();
+                // updateCardPreview();
+            });
+
+            // ─── Initial preview ──────────────────────────────────────
+            updateCardPreview();
+
+        })();
+    </script>
+
+</body>
 </html>
