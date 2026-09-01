@@ -31,6 +31,21 @@ header {
     z-index: 100;
 }
 
+
+.video-wrapper {
+    padding: 16px 0 8px 0;   
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;     
+    display: block;
+    border-radius: 16px;     
+    background: #ede6de;      
+    object-fit: cover;       
+}
+
 .header-flex {
     display: flex;
     align-items: center;
@@ -148,7 +163,6 @@ header {
     color: #6f7a7a;
 }
 
-/* ----- remaining layout styles for other pages (adopt, progress, etc.) ----- */
 
 .progess-header {
     text-align:center;
@@ -289,8 +303,6 @@ header {
     color: #1e2b2c;
     margin-top: 6px;
 }
-
-/* ----- responsive rules (slideshow media queries removed) ----- */
 
 @media (max-width: 768px) {
     .header-flex {
