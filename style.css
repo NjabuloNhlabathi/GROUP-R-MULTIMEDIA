@@ -31,21 +31,6 @@ header {
     z-index: 100;
 }
 
-
-.video-wrapper {
-    padding: 16px 0 8px 0;   
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: auto;
-    max-height: 500px;     
-    display: block;
-    border-radius: 16px;     
-    background: #ede6de;      
-    object-fit: cover;       
-}
-
 .header-flex {
     display: flex;
     align-items: center;
@@ -110,11 +95,35 @@ header {
     color: #d97a3e;
 }
 
+.video-wrapper {
+    padding: 16px 0 8px 0;   
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    max-height: 500px;     
+    display: block;
+    border-radius: 16px;     
+    background: #ede6de;      
+    object-fit: cover;       
+}
+
+
 .headingIndex {
     text-align: center;
     margin-top: 20px;
     font-size: 2rem;
     color: #d97a3e;
+}
+
+.paragraphIndex {
+    text-align: center;
+    
+    color: #3f4e4f;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer {
