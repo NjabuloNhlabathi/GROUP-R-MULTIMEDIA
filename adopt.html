@@ -19,42 +19,171 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="homepage.html">HOME</a></li>
-          <li><a href="adopt.html">ADOPT</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="animals.html">ADOPT</a></li>
           <li><a href="shop.html">SHOP</a></li>
         </ul>
       </div>
     </header>
 
-    <h1>Adopt a Pet</h1>
+<main>
 
+    <section class="adoption-page">
 
+        <div class="adoption-image">
+            <img src="AdoptPage Image/AdoptPageImage.jpg" alt="Animal Decoration">
+        </div>
 
+        <div class="adoption-content">
 
-    <footer>
-      <div class="container footer-flex">
-        <div class="footer-brand">
+            <h2>Adoption Details</h2>
+
+            <p>Please enter your details below.</p>
+
+            <form class="adoption-form">
+
+                <label>
+                    <b>Full Name:</b>
+                    <input type="text" required>
+                </label>
+
+               <label>
+                    <b>Email Address:</b>
+                  <input type="email" required>
+                </label>
+
+                <label>
+                    <b>Phone Number:</b>
+                   <input type="tel" required>
+                </label>
+
+                <label>
+                    <b>Address:</b>
+                    <textarea rows="4" required></textarea>
+                </label>
+
+              <label>
+                    <b>Type of Housing:</b>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Townhouse</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+            <label>
+                <b>Why do you want to adopt?</b>
+                <textarea rows="5" required></textarea>
+            </label>
+
+                <label>
+                    <input type="checkbox" required>
+                    <b>I confirm that the information provided is correct.</b>
+                </label>
+
+                <div class="adoption-navigation">
+                    <a href="animals.html">Back</a>
+                    <a href="Progress.html">Next</a>
+                </div>
+            </form>
+
+        </div>
+      </section>
+
+<h1 class="headingIndex">ADOPTION APPLICATION AND BOOKING FEE</h1>
+
+<div class="table-wrapper">
+    <table class="simple-table">
+        <thead>
+            <tr>
+                <th>Pet Type</th>
+                <th>Adoption Fee</th>
+                <th>Includes</th>
+                <th>Age Range</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Puppies (under 1 year)</td>
+                <td>R600</td>
+                <td>Vaccinations, deworming, microchip</td>
+                <td>2–12 months</td>
+            </tr>
+            <tr>
+                <td>Adult Dogs (1–7 years)</td>
+                <td>R450</td>
+                <td>Vaccinations, deworming, sterilization</td>
+                <td>1–7 years</td>
+            </tr>
+            <tr>
+                <td>Senior Dogs (8+ years)</td>
+                <td>R350</td>
+                <td>Vaccinations, deworming, health check</td>
+                <td>8+ years</td>
+            </tr>
+            <tr>
+                <td>Kittens (under 1 year)</td>
+                <td>R550</td>
+                <td>Vaccinations, deworming, microchip</td>
+                <td>2–12 months</td>
+            </tr>
+            <tr>
+                <td>Adult Cats (1–7 years)</td>
+                <td>R400</td>
+                <td>Vaccinations, deworming, sterilization</td>
+                <td>1–7 years</td>
+            </tr>
+            <tr>
+                <td>Rabbits</td>
+                <td>R250</td>
+                <td>Health check, deworming</td>
+                <td>All ages</td>
+            </tr>
+            <tr>
+                <td>Mice / Small pets</td>
+                <td>R150</td>
+                <td>Health check</td>
+                <td>All ages</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+</main>
+
+ <footer>
+     <div class="container footer-flex">
+      <div class="footer-brand">
+      <div class="logo">
+        <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
+        <div>
           <div class="logo-text">Paws<span>Nelspruit</span></div>
           <span class="logo-sub">Mpumalanga Animal Rescue</span>
-          <p>
-            A registered non-profit animal rescue organisation serving Nelspruit
-            since 2019.
-          </p>
-          <div class="footer-contact">
-            <div>
-              <span class="icon"></span> 14 Ferreira Street, Nelspruit, 1200
-            </div>
-            <div><span class="icon"></span> 013 744 1822</div>
-            <div><span class="icon"></span> adopt@pawsnelspruit.co.za</div>
-          </div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="container">
-          <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
-        </div>
+      <p>
+        A registered non-profit animal rescue organisation serving Nelspruit
+        since 2019.
+      </p>
+
+      <div class="footer-contact">
+        <div> 14 Ferreira Street, Nelspruit, 1200</div>
+        <div> 013 744 1822</div>
+        <div> adopt@pawsnelspruit.co.za</div>
       </div>
-    </footer>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>
