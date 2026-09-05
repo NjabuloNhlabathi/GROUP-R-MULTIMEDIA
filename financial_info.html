@@ -3,109 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PawsNelspruit — Animal Rescue</title>
+    <title>PawsNelspruit — Checkout</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <STYLE>
-  
-    
-    .A{
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-      gap: 10px;
-    }
-    .B {
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-      gap: 10px;
-    }
-    .C {
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-    }
-    .D {
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-    }
-    .E {
-      width: 80px;
-      height: 50px;
-      border: 1px solid black;
-    }
-    .F {
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-    }
-    .G {
-      width: 120px;
-      height: 50px;
-      border: 1px solid black;
-    }
-    .H {
-      width: 280px;
-      height: 50px;
-      border: 1px solid black;
-    }
-.A1 {
-  WIDTH: 100px;
-  HEIGHT: 100px;
-  
-}
-  .A2 {
-    WIDTH: 100px;
-    HEIGHT: 100px;
-  }
-  .delivery-A3 {
-    WIDTH: 100px;
-    HEIGHT: 100px;
-  }
-  .delivery-method {
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-    border: 3px solid black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .delivery-method:hover {
-    background-color: #f0f0f0;
-    border-color: #007bff;
-  }
-  .delivery-method01 {
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-    border: 3px solid black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .delivery-method01:hover {
-    background-color: #f0f0f0;
-    border-color: #007bff;
-  }
-  .delivery-method02 {
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-    border: 3px solid black;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .delivery-method02:hover {
-    background-color: #f0f0f0;
-    border-color: #007bff;
-  }
-  .methods {
-    display :flex ;
-    justify-content: space-between ;
-    gap: 8px ;
-  }
-  </STYLE>
   <body>
 
     <header>
@@ -119,96 +19,127 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="homepage.html">HOME</a></li>
-          <li><a href="adopt.html">ADOPT</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="animals.html">ADOPT</a></li>
           <li><a href="shop.html">SHOP</a></li>
         </ul>
       </div>
     </header>
 
-    <h1>Address details</h1>
-    <P>Dynamically whiteboard frictionless models for clinet-centric architectures.</P><br>
+    <main>
+      <section class="adoption-page">
+        <div class="adoption-content">
 
+          <h2>Address Details</h2>
+          <p>Please enter your delivery and billing information below.</p>
 
-    <div class="delivery address"><H3>Delivery address</H3><BR>
+          <form class="adoption-form">
 
-    <div class="form">
-      <form>
-        <label for="fname"><b>First Name</b></label><br><input class="A" type="text" placeholder="jolly" id="fname" name="fname" ><br>
-          <label  for="lname"><b>Last Name</b></label><input CLASS="B" type="text" placeholder="jones" id="lname" name="lname" ><BR><br>
-      </form></div>
-      
-      <br>
-      
-      <label  for="street"><b>Street Address</b></label><BR><input class="C" type="text" placeholder="14 Ferreira Street" id="street" name="street" ><BR><br>
+            <label>
+              <b>First Name</b>
+              <input type="text" placeholder="Jolly" />
+            </label>
 
-        <div>
-          <label  for="city"><b>City</b></label><BR><input CLASS="D" type="text" placeholder="Nelspruit" id="city" name="city" >
-          </div>
+            <label>
+              <b>Last Name</b>
+              <input type="text" placeholder="Jones" />
+            </label>
 
-        <div>
-          <label  for="Zip code"><b>Zip Code</b></label><BR><input CLASS="E" type="text" placeholder="1200" id="zip" name="zip" ><BR><br>
-          </div>
+            <label>
+              <b>Street Address</b>
+              <input type="text" placeholder="14 Ferreira Street" />
+            </label>
 
-          <label  for="country"><b>Country</b></label><br>
-          <select CLASS="G" id="country" name="country">
-            <option value="South Africa">South Africa</option>
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-            <option value="Australia">Australia</option>
-          </select><BR><br>
+            <label>
+              <b>City</b>
+              <input type="text" placeholder="Nelspruit" />
+            </label>
 
-            <label  for="phone"><b>Phone Number</b></label><BR><input class="H" type="text" placeholder="+27 13 744 1822" id="phone" name="phone" ></div>
-            </div><BR><br><br>
+            <label>
+              <b>Zip Code</b>
+              <input type="text" placeholder="1200" />
+            </label>
 
-              <H2>Billing Address</H2><br>
-              <input type="checkbox" id="same-address" name="same-address" value="same-address">
-              <label for="same-address">Use delivery address as billing address</label><br><br><br><br>
-              <h2>Delivery method</h2><br>
-             <div class="methods"> <div class="delivery-method">
-                <input type="radio" id="DHL Express" name="delivery" value="DHL Express">
-                <label for="DHL Express"><b>DHL Express</b><br><p>Tomorrow delivery:tomorrow<br><br><br><br><b>R220.00</b></p></label></div><br>
-                <div class="delivery-method01"><input  type="radio" id="FEDEX" name="delivery" value="FEDEX">
-                <label for="FEDEX"><b>FEDEX</b><br><p>friday 01.02.2019<br><br><br><br><br><b>R179.99</b></p></label></div><br>
-                <div class="delivery-method02"><input type="radio" id="DHL" name="delivery" value="DHL">
-                <label for="DHL"><b>DHL</b><br><p>Monday 11.02.2019 <br><br><br><br><br><P><b>R100.00</b></P></p></label></div></div>
-                <br>
-               <div><img src="american express.jpg.jpeg" alt="Delivery methods" class="A1" />
-                <img src="visa and mastercard.jpg.jpeg" alt="Delivery methods" class="A2" />
-                <img src="PayPAL.jpg.jpeg" alt="Delivery methods" class="delivery-A3" />
-              </div><br><br>
+            <label>
+              <b>Country</b>
+              <select>
+                <option value="South Africa">South Africa</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+              </select>
+            </label>
 
-      
-    </div>
+            <label>
+              <b>Phone Number</b>
+              <input type="text" placeholder="+27 13 744 1822" />
+            </label>
 
+            <label>
+              <input type="checkbox" />
+              <b>Use delivery address as billing address</b>
+            </label>
 
+            <h3 style="text-align:center; margin-top:20px;">Delivery Method</h3>
 
+            <div class="delivery-methods">
+              <div class="delivery-method">
+                <input type="radio" id="dhl-express" name="delivery" />
+                <label for="dhl-express"><b>DHL Express</b></label>
+                <p>Tomorrow delivery</p>
+                <p><b>R220.00</b></p>
+              </div>
 
+              <div class="delivery-method">
+                <input type="radio" id="fedex" name="delivery" />
+                <label for="fedex"><b>FEDEX</b></label>
+                <p>Friday 01.02.2019</p>
+                <p><b>R179.99</b></p>
+              </div>
+
+              <div class="delivery-method">
+                <input type="radio" id="dhl" name="delivery" />
+                <label for="dhl"><b>DHL</b></label>
+                <p>Monday 11.02.2019</p>
+                <p><b>R100.00</b></p>
+              </div>
+            </div>
+
+            <div class="payment-icons">
+              <img src="american express.jpg.jpeg" alt="American Express" />
+              <img src="visa and mastercard.jpg.jpeg" alt="Visa and Mastercard" />
+              <img src="PayPAL.jpg.jpeg" alt="PayPal" />
+            </div>
+
+          </form>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container footer-flex">
         <div class="footer-brand">
-          <div class="logo-text">Paws<span>Nelspruit</span></div>
-          <span class="logo-sub">Mpumalanga Animal Rescue</span>
-          <p>
-            A registered non-profit animal rescue organisation serving Nelspruit
-            since 2019.
-          </p>
-          <div class="footer-contact">
+          <div class="logo">
+            <img src="logo.jpg" alt="PawsNelspruit logo" class="logo-img" />
             <div>
-              <span class="icon"></span> 14 Ferreira Street, Nelspruit, 1200
+              <div class="logo-text">Paws<span>Nelspruit</span></div>
+              <span class="logo-sub">Mpumalanga Animal Rescue</span>
             </div>
-            <div><span class="icon"></span> 013 744 1822</div>
-            <div><span class="icon"></span> adopt@pawsnelspruit.co.za</div>
+          </div>
+          <p>A registered non-profit animal rescue organisation serving Nelspruit since 2019.</p>
+          <div class="footer-contact">
+            <div>14 Ferreira Street, Nelspruit, 1200</div>
+            <div>013 744 1822</div>
+            <div>adopt@pawsnelspruit.co.za</div>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
         <div class="container">
           <span>&copy; 2026 PawsNelspruit. All rights reserved.</span>
         </div>
       </div>
     </footer>
+
   </body>
 </html>

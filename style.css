@@ -391,3 +391,66 @@ header {
     font-size: 0.95rem;
     color: #1e2b2c;
 }
+
+.category-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 40px 0 20px 0;
+}
+
+.delivery-methods {
+    display: flex;
+    gap: 16px;
+    margin: 15px 0 20px 0;
+}
+
+.delivery-method {
+    flex: 1;
+    padding: 16px 18px;
+    border: 2px solid #000000;
+    background: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delivery-method:hover {
+    background: #f5f0eb;
+}
+
+.delivery-method input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #d97a3e;
+    cursor: pointer;
+}
+
+.delivery-method label {
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.delivery-method p {
+    margin: 4px 0 0 0;
+    color: #3f4e4f;
+    font-size: 0.95rem;
+}
+
+.delivery-method .price {
+    font-weight: 700;
+    color: #1e2b2c;
+    margin-top: 6px;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 16px;
+    margin: 10px 0 30px 0;
+}
+
+.payment-icons img {
+    width: 100px;
+    height: auto;
+    border: 2px solid #000000;
+    padding: 8px;
+    background: #ffffff;
+}
